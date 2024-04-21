@@ -1,0 +1,156 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\A C E R   N I T R O\\Documents\\.NET\\Uy ishi\\Auth-Identity\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{CFB03843-8C3E-4D7F-9417-077C09AB9D80}|Auth-Identity\\Auth-Identity.csproj|c:\\users\\a c e r   n i t r o\\documents\\.net\\uy ishi\\auth-identity\\auth-identity\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CFB03843-8C3E-4D7F-9417-077C09AB9D80}|Auth-Identity\\Auth-Identity.csproj|solutionrelative:auth-identity\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CFB03843-8C3E-4D7F-9417-077C09AB9D80}|Auth-Identity\\Auth-Identity.csproj|c:\\users\\a c e r   n i t r o\\documents\\.net\\uy ishi\\auth-identity\\auth-identity\\dtos\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CFB03843-8C3E-4D7F-9417-077C09AB9D80}|Auth-Identity\\Auth-Identity.csproj|solutionrelative:auth-identity\\dtos\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CFB03843-8C3E-4D7F-9417-077C09AB9D80}|Auth-Identity\\Auth-Identity.csproj|c:\\users\\a c e r   n i t r o\\documents\\.net\\uy ishi\\auth-identity\\auth-identity\\dtos\\registerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CFB03843-8C3E-4D7F-9417-077C09AB9D80}|Auth-Identity\\Auth-Identity.csproj|solutionrelative:auth-identity\\dtos\\registerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CFB03843-8C3E-4D7F-9417-077C09AB9D80}|Auth-Identity\\Auth-Identity.csproj|c:\\users\\a c e r   n i t r o\\documents\\.net\\uy ishi\\auth-identity\\auth-identity\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CFB03843-8C3E-4D7F-9417-077C09AB9D80}|Auth-Identity\\Auth-Identity.csproj|solutionrelative:auth-identity\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CFB03843-8C3E-4D7F-9417-077C09AB9D80}|Auth-Identity\\Auth-Identity.csproj|c:\\users\\a c e r   n i t r o\\documents\\.net\\uy ishi\\auth-identity\\auth-identity\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CFB03843-8C3E-4D7F-9417-077C09AB9D80}|Auth-Identity\\Auth-Identity.csproj|solutionrelative:auth-identity\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CFB03843-8C3E-4D7F-9417-077C09AB9D80}|Auth-Identity\\Auth-Identity.csproj|c:\\users\\a c e r   n i t r o\\documents\\.net\\uy ishi\\auth-identity\\auth-identity\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CFB03843-8C3E-4D7F-9417-077C09AB9D80}|Auth-Identity\\Auth-Identity.csproj|solutionrelative:auth-identity\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CFB03843-8C3E-4D7F-9417-077C09AB9D80}|Auth-Identity\\Auth-Identity.csproj|c:\\users\\a c e r   n i t r o\\documents\\.net\\uy ishi\\auth-identity\\auth-identity\\models\\iauditabel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CFB03843-8C3E-4D7F-9417-077C09AB9D80}|Auth-Identity\\Auth-Identity.csproj|solutionrelative:auth-identity\\models\\iauditabel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CFB03843-8C3E-4D7F-9417-077C09AB9D80}|Auth-Identity\\Auth-Identity.csproj|c:\\users\\a c e r   n i t r o\\documents\\.net\\uy ishi\\auth-identity\\auth-identity\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{CFB03843-8C3E-4D7F-9417-077C09AB9D80}|Auth-Identity\\Auth-Identity.csproj|solutionrelative:auth-identity\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "LoginDTO.cs",
+              "DocumentMoniker": "C:\\Users\\A C E R   N I T R O\\Documents\\.NET\\Uy ishi\\Auth-Identity\\Auth-Identity\\DTOs\\LoginDTO.cs",
+              "RelativeDocumentMoniker": "Auth-Identity\\DTOs\\LoginDTO.cs",
+              "ToolTip": "C:\\Users\\A C E R   N I T R O\\Documents\\.NET\\Uy ishi\\Auth-Identity\\Auth-Identity\\DTOs\\LoginDTO.cs",
+              "RelativeToolTip": "Auth-Identity\\DTOs\\LoginDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAA1AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-21T17:55:48.583Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "RegisterDTO.cs",
+              "DocumentMoniker": "C:\\Users\\A C E R   N I T R O\\Documents\\.NET\\Uy ishi\\Auth-Identity\\Auth-Identity\\DTOs\\RegisterDTO.cs",
+              "RelativeDocumentMoniker": "Auth-Identity\\DTOs\\RegisterDTO.cs",
+              "ToolTip": "C:\\Users\\A C E R   N I T R O\\Documents\\.NET\\Uy ishi\\Auth-Identity\\Auth-Identity\\DTOs\\RegisterDTO.cs",
+              "RelativeToolTip": "Auth-Identity\\DTOs\\RegisterDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAwAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-21T16:41:23.301Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "C:\\Users\\A C E R   N I T R O\\Documents\\.NET\\Uy ishi\\Auth-Identity\\Auth-Identity\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "Auth-Identity\\Controllers\\UserController.cs",
+              "ToolTip": "C:\\Users\\A C E R   N I T R O\\Documents\\.NET\\Uy ishi\\Auth-Identity\\Auth-Identity\\Controllers\\UserController.cs",
+              "RelativeToolTip": "Auth-Identity\\Controllers\\UserController.cs",
+              "ViewState": "AQIAADYAAAAAAAAAAAAYwEgAAAAiAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-21T16:36:35.242Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\A C E R   N I T R O\\Documents\\.NET\\Uy ishi\\Auth-Identity\\Auth-Identity\\Program.cs",
+              "RelativeDocumentMoniker": "Auth-Identity\\Program.cs",
+              "ToolTip": "C:\\Users\\A C E R   N I T R O\\Documents\\.NET\\Uy ishi\\Auth-Identity\\Auth-Identity\\Program.cs",
+              "RelativeToolTip": "Auth-Identity\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-21T16:23:01.221Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AppDBContext.cs",
+              "DocumentMoniker": "C:\\Users\\A C E R   N I T R O\\Documents\\.NET\\Uy ishi\\Auth-Identity\\Auth-Identity\\AppDBContext.cs",
+              "RelativeDocumentMoniker": "Auth-Identity\\AppDBContext.cs",
+              "ToolTip": "C:\\Users\\A C E R   N I T R O\\Documents\\.NET\\Uy ishi\\Auth-Identity\\Auth-Identity\\AppDBContext.cs",
+              "RelativeToolTip": "Auth-Identity\\AppDBContext.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-21T16:21:40.686Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "IAuditabel.cs",
+              "DocumentMoniker": "C:\\Users\\A C E R   N I T R O\\Documents\\.NET\\Uy ishi\\Auth-Identity\\Auth-Identity\\Models\\IAuditabel.cs",
+              "RelativeDocumentMoniker": "Auth-Identity\\Models\\IAuditabel.cs",
+              "ToolTip": "C:\\Users\\A C E R   N I T R O\\Documents\\.NET\\Uy ishi\\Auth-Identity\\Auth-Identity\\Models\\IAuditabel.cs",
+              "RelativeToolTip": "Auth-Identity\\Models\\IAuditabel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-21T13:55:39.507Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\A C E R   N I T R O\\Documents\\.NET\\Uy ishi\\Auth-Identity\\Auth-Identity\\Models\\User.cs",
+              "RelativeDocumentMoniker": "Auth-Identity\\Models\\User.cs",
+              "ToolTip": "C:\\Users\\A C E R   N I T R O\\Documents\\.NET\\Uy ishi\\Auth-Identity\\Auth-Identity\\Models\\User.cs",
+              "RelativeToolTip": "Auth-Identity\\Models\\User.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-21T13:48:55.394Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\A C E R   N I T R O\\Documents\\.NET\\Uy ishi\\Auth-Identity\\Auth-Identity\\appsettings.json",
+              "RelativeDocumentMoniker": "Auth-Identity\\appsettings.json",
+              "ToolTip": "C:\\Users\\A C E R   N I T R O\\Documents\\.NET\\Uy ishi\\Auth-Identity\\Auth-Identity\\appsettings.json",
+              "RelativeToolTip": "Auth-Identity\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-04-21T16:24:59.68Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

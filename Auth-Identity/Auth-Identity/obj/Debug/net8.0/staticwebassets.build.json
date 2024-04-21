@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "Vo9ARV5otzdUKNVRWfz4veAglliEx0HQNhi3xvlliGA=",
+  "Source": "Auth-Identity",
+  "BasePath": "_content/Auth-Identity",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
