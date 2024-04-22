@@ -108,3 +108,11 @@ C:\Users\A C E R   N I T R O\Documents\.NET\Uy ishi\Auth-Identity\Auth-Identity\
 C:\Users\A C E R   N I T R O\Documents\.NET\Uy ishi\Auth-Identity\Auth-Identity\obj\Debug\net8.0\Auth-Identity.pdb
 C:\Users\A C E R   N I T R O\Documents\.NET\Uy ishi\Auth-Identity\Auth-Identity\obj\Debug\net8.0\Auth-Identity.genruntimeconfig.cache
 C:\Users\A C E R   N I T R O\Documents\.NET\Uy ishi\Auth-Identity\Auth-Identity\obj\Debug\net8.0\ref\Auth-Identity.dll
+C:\Users\A C E R   N I T R O\Documents\.NET\Uy ishi\Auth-Identity\Auth-Identity\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\A C E R   N I T R O\Documents\.NET\Uy ishi\Auth-Identity\Auth-Identity\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\A C E R   N I T R O\Documents\.NET\Uy ishi\Auth-Identity\Auth-Identity\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\A C E R   N I T R O\Documents\.NET\Uy ishi\Auth-Identity\Auth-Identity\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\A C E R   N I T R O\Documents\.NET\Uy ishi\Auth-Identity\Auth-Identity\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\A C E R   N I T R O\Documents\.NET\Uy ishi\Auth-Identity\Auth-Identity\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\A C E R   N I T R O\Documents\.NET\Uy ishi\Auth-Identity\Auth-Identity\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\A C E R   N I T R O\Documents\.NET\Uy ishi\Auth-Identity\Auth-Identity\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll

@@ -1,5 +1,6 @@
-﻿using Auth_Identity.DTOs;
-using Auth_Identity.Models;
+﻿using Auth_Identity.Models;
+using Auth_Identity.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -9,71 +10,22 @@ namespace Auth_Identity.Controllers
 {
     [Route("api/[controller]/[action]")]
     [ApiController]
+    [Authorize]
     public class UserController : ControllerBase
     {
         public readonly UserManager<User> _userManager;
+        private readonly RoleManager<IdentityRole> _roleManager;
+        private readonly IAuthService _authService;
 
-        public readonly RoleManager<IdentityRole> _roleManager;
-
-        public UserController(UserManager<User> userManager, RoleManager<IdentityRole> roleManager)
+        public UserController(UserManager<User> userManager, RoleManager<IdentityRole> roleManager, IAuthService authService)
         {
             _roleManager = roleManager;
             _userManager = userManager;
-        }
-
-        [HttpPost]
-        public async Task<ActionResult> Register(RegisterDTO model)
-        {
-            if (!ModelState.IsValid)
-            {
-                return BadRequest(ModelState);
-            }
-
-            var user = new User
-            {
-                FullName = model.FullName,
-                UserName = model.Email,
-                Email = model.Email,
-                Age = model.Age,
-                Status = model.Status,
-            };
-
-            var res = await _userManager.CreateAsync(user, model.Password);
-
-            if (!res.Succeeded)
-            {
-                return BadRequest(res.Errors);
-            }
-
-            foreach(var role in model.Roles)
-            {
-                await _userManager.AddToRoleAsync(user, role);
-            }
-
-            return Ok(res);
-        }
-
-        [HttpPost]
-        public async Task<ActionResult<string>> Login(LoginDTO login)
-        {
-            var testRes = await _userManager.FindByEmailAsync(login.Email);
-
-            if (testRes == null)
-            {
-                return Unauthorized("Email not found!");
-            }
-
-            var checkPswrd = await _userManager.CheckPasswordAsync(testRes, login.Password);
-
-            if (!checkPswrd)
-            {
-                return Unauthorized("Incorrect password!");
-            }
-
-            return Ok("Welcome!");
+            _authService = authService;
         }
 
         [HttpGet]
+        [Authorize(Roles = "Admin, Student")]
         public async Task<ActionResult<User[]>> GetAllUsers()
         {
             var res = await _userManager.Users.ToListAsync();
