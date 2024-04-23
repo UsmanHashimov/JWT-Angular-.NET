@@ -33,31 +33,33 @@ namespace Auth_Identity.Services
             }
 
             var tokenHandler = new JwtSecurityTokenHandler();
-
             var key = Encoding.ASCII.GetBytes(_configuration["JWTSettings:secretKey"]!);
-
             var roles = await _userManager.GetRolesAsync(user);
+            var claims = new List<Claim>
+            {
+                new Claim(JwtRegisteredClaimNames.Email, user.Email!),
+                new Claim(JwtRegisteredClaimNames.Name, user.FullName!),
+                new Claim(JwtRegisteredClaimNames.NameId, user.Id),
+                new Claim(JwtRegisteredClaimNames.Aud, _configuration["JWTSettings:ValidAudience"]!),
+                new Claim(JwtRegisteredClaimNames.Iss, _configuration["JWTSettings:ValidIssuer"]!)
+            };
 
-            List<Claim> claims =
-                [
-                    new(JwtRegisteredClaimNames.Email, user.Email!),
-                    new(JwtRegisteredClaimNames.Name, user.FullName!),
-                    new(JwtRegisteredClaimNames.NameId, user.Id),
-                    new(JwtRegisteredClaimNames.Aud, _configuration["JWTSettings:ValidAudience"]!),
-                    new(JwtRegisteredClaimNames.Iss, _configuration["JWTSettings:ValidIssuer"]!),
-                    new(JwtRegisteredClaimNames.Exp, _configuration["JWTSettings:ExpireDate"]!),
-                ];
+            foreach (var role in roles)
+            {
+                claims.Add(new Claim(ClaimTypes.Role, role));
+            }
 
-            var tokenDescriptor = new SecurityTokenDescriptor()
+            var expireTime = DateTime.UtcNow.AddMinutes(Double.Parse(_configuration["JWTSettings:ExpireDate"]!));
+            var tokenDescriptor = new SecurityTokenDescriptor
             {
                 Subject = new ClaimsIdentity(claims),
-                Expires = DateTime.UtcNow.AddMinutes(Double.Parse(_configuration["JWTSettings:ExpireDate"]!)),
+                Expires = expireTime,
                 SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256)
             };
 
             var token = tokenHandler.CreateToken(tokenDescriptor);
 
-            return new AuthDTO()
+            return new AuthDTO
             {
                 Token = tokenHandler.WriteToken(token),
                 Message = "Token successfully created",

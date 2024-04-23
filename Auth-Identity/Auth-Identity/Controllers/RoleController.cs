@@ -35,7 +35,7 @@ namespace Auth_Identity.Controllers
                 {
                     Message = "Role created!!!",
                     isSuccess = true,
-                    StatusCode = 201
+                    StatusCode = 200
                 });
             }
 
@@ -96,7 +96,9 @@ namespace Auth_Identity.Controllers
                 });
             }
 
-            await _roleManager.UpdateAsync(new IdentityRole(newRole.RoleName));
+            res.Name = newRole.RoleName;
+
+            await _roleManager.UpdateAsync(new IdentityRole(res.Name));
 
             return Ok(new ResponceDTO
             {
