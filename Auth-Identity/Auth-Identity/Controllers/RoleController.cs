@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System.Data;
 
 namespace Auth_Identity.Controllers
 {
@@ -55,6 +56,34 @@ namespace Auth_Identity.Controllers
             return Ok(roles);
         }
 
+        [HttpPut]
+        [Authorize(Roles = "Admin")]
+        public async Task<ActionResult<ResponceDTO>> UpdateRole(string name, RoleDTO newRole)
+        {
+            var res = await _roleManager.FindByNameAsync(name);
+
+            if (res == null)
+            {
+                return BadRequest(new ResponceDTO
+                {
+                    Message = "Role not found",
+                    StatusCode = 404,
+                    isSuccess = false
+                });
+            }
+
+            res.Name = newRole.RoleName;
+
+            var result = await _roleManager.UpdateAsync(res);
+
+            return Ok(new ResponceDTO
+            {
+                Message = "Role updated",
+                StatusCode = 200,
+                isSuccess = true
+            });
+        }
+
         [HttpDelete]
         [Authorize(Roles = "Admin")]
         public async Task<ActionResult<ResponceDTO>> DeleteRole(string name)
@@ -75,34 +104,6 @@ namespace Auth_Identity.Controllers
             return Ok(new ResponceDTO
             {
                 Message = "Role succesfully deleted!!",
-                StatusCode = 200,
-                isSuccess = true
-            });
-        }
-
-        [HttpPut]
-        [Authorize(Roles = "Admin")]
-        public async Task<ActionResult<ResponceDTO>> UpdateRole(string name, RoleDTO newRole)
-        {
-            var res = await _roleManager.FindByNameAsync(name);
-
-            if (res == null)
-            {
-                return BadRequest(new ResponceDTO
-                {
-                    Message = "Role not found",
-                    StatusCode = 404,
-                    isSuccess = false
-                });
-            }
-
-            res.Name = newRole.RoleName;
-
-            await _roleManager.UpdateAsync(new IdentityRole(res.Name));
-
-            return Ok(new ResponceDTO
-            {
-                Message = "Role updated",
                 StatusCode = 200,
                 isSuccess = true
             });

@@ -1,4 +1,5 @@
-﻿using Auth_Identity.Models;
+﻿using Auth_Identity.DTOs;
+using Auth_Identity.Models;
 using Auth_Identity.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
@@ -37,5 +38,6 @@ namespace Auth_Identity.Controllers
 
             return Ok(res);
         }
+
     }
 }
