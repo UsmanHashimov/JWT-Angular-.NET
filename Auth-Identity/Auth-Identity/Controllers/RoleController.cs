@@ -1,4 +1,5 @@
 ﻿using Auth_Identity.DTOs;
+using Auth_Identity.Filters;
 using Auth_Identity.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
@@ -25,6 +26,8 @@ namespace Auth_Identity.Controllers
 
         [HttpPost]
         [Authorize(Roles = "Admin")]
+        [AuthorizationFilter]
+        [ActionFIlter]
         public async Task<ActionResult<ResponceDTO>> CreateRole(RoleDTO role)
         {
             var res = await _roleManager.FindByNameAsync(role.RoleName);
@@ -49,6 +52,7 @@ namespace Auth_Identity.Controllers
 
         [HttpGet]
         [Authorize(Roles = "Admin")]
+        [ExceptionFilter]
         public async Task<ActionResult<List<IdentityRole>>> GetAllRoles()
         {
             var roles = await _roleManager.Roles.ToListAsync();
@@ -58,6 +62,7 @@ namespace Auth_Identity.Controllers
 
         [HttpPut]
         [Authorize(Roles = "Admin")]
+        [ResourceFilter]
         public async Task<ActionResult<ResponceDTO>> UpdateRole(string name, RoleDTO newRole)
         {
             var res = await _roleManager.FindByNameAsync(name);
@@ -86,6 +91,7 @@ namespace Auth_Identity.Controllers
 
         [HttpDelete]
         [Authorize(Roles = "Admin")]
+        [ResourceFilter]
         public async Task<ActionResult<ResponceDTO>> DeleteRole(string name)
         {
             var res = await _roleManager.FindByNameAsync(name);
