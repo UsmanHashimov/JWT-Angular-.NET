@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Auth_Identity.Controllers
 {
-    [Route("api/[controller]/[Action]")]
+    [Route("api/[controller]/[action]")]
     [ApiController]
     public class AuthController : ControllerBase
     {
@@ -24,11 +24,15 @@ namespace Auth_Identity.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult> Register(RegisterDTO model)
+        public async Task<ActionResult<ResponceDTO>> Register(RegisterDTO model)
         {
             if (!ModelState.IsValid)
             {
-                return BadRequest(ModelState);
+                return BadRequest(new ResponceDTO
+                {
+                    Message = "User cannot created",
+                    StatusCode = 403
+                });
             }
 
             var user = new User
@@ -44,7 +48,11 @@ namespace Auth_Identity.Controllers
 
             if (!res.Succeeded)
             {
-                return BadRequest(res.Errors);
+                return BadRequest(new ResponceDTO
+                {
+                    Message = $"{res.Errors}",
+                    StatusCode = 403
+                });
             }
 
             foreach (var role in model.Roles)
@@ -52,7 +60,12 @@ namespace Auth_Identity.Controllers
                 await _userManager.AddToRoleAsync(user, role);
             }
 
-            return Ok(res);
+            return Ok(new ResponceDTO
+            {
+                Message = "You succesfully registered!",
+                StatusCode = 200,
+                isSuccess = true
+            });
         }
 
         [HttpPost]
