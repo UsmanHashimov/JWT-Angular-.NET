@@ -1,5 +1,5 @@
 <div class="h-screen flex items-center justify-center">
-    <form class="shadow-md rounded-md p-5 bg-white w-2/6" [formGroup]="form" (ngSubmit)="login()">
+    <form class="shadow-md rounded-md p-5 bg-blue-400 w-2/6" [formGroup]="form" (ngSubmit)="login()">
       <div class="py-4">
         <h1 class="font-bold py-2">
           Login
@@ -25,8 +25,7 @@
         </mat-icon>
       </mat-form-field>
   
-      <button (click)="login()" type="submit" [disabled]="!form.valid"
-        class="w-full border border-slate-200 rounded-md disabled:bg-purple-400 py-2 px-3 bg-purple-700 text-white font-bold">
+      <button type="submit" class="w-full border text-white font-bold" mat-flat-button color="primary">
         Login
       </button>
   
