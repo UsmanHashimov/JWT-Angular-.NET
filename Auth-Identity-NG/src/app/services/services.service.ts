@@ -3,7 +3,7 @@ import { Injectable, inject } from '@angular/core';
 import { environment } from '../../environments/environment.development';
 import { Router } from '@angular/router';
 import { LoginRequest } from '../interfaces/login-request';
-import { Observable, map } from 'rxjs';
+import { Observable, ObservedValueOf, map } from 'rxjs';
 import { LoginResponse } from '../interfaces/login-responce';
 import { registerRequest } from '../interfaces/register-request';
 import { registerResponce } from '../interfaces/register-responce';
@@ -16,6 +16,7 @@ export class AuthService {
   constructor(private http: HttpClient) { }
   apiUrl = environment.apiUrl;
   tokenKey: string = 'token';
+  token: any | null
   router = inject(Router)
 
   login(data: LoginRequest): Observable<LoginResponse>{
@@ -40,5 +41,14 @@ export class AuthService {
         return responce;
       })
     )
+  }
+
+  logout(){
+    this.token = localStorage.getItem(this.tokenKey)
+    if (this.token == '') {
+      return false;
+    }
+    localStorage.setItem(this.tokenKey, '');
+    return true;
   }
 }

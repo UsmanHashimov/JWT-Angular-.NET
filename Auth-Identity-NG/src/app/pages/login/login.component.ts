@@ -4,6 +4,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
 import { AuthService } from '../../services/services.service';
 import { jwtDecode } from 'jwt-decode';
+import { TranslocoService } from '@ngneat/transloco';
 
 @Component({
   selector: 'app-login',
@@ -12,6 +13,41 @@ import { jwtDecode } from 'jwt-decode';
 })
 export class LoginComponent {
   
+  title = 'identity-cient';
+
+  constructor(private readonly translocoService: TranslocoService){
+    this.translocoService.translate('title')
+    this.translocoService.translate('form.firstName')
+  }
+
+  public languagesList: 
+    Array<Record<'imgUrl' | 'code' | 'name' | 'shorthand', string>> = [
+    {
+      imgUrl: '/assets/images/English.png',
+      code: 'en',
+      name: 'English',
+      shorthand: 'ENG',
+    },
+    {
+      imgUrl: '/assets/images/russia.png',
+      code: 'ru',
+      name: 'Russian',
+      shorthand: 'RU',
+    },
+    {
+      imgUrl: '/assets/images/uzbekistan.png',
+      code: 'uz',
+      name: 'Uzbekistan',
+      shorthand: 'UZB',
+    },
+  ];
+  public changeLanguage(languageCode: string): void {
+    this.translocoService.setActiveLang(languageCode);
+    languageCode === 'fl'
+      ? (document.body.style.direction = 'rtl')
+      : (document.body.style.direction = 'ltr');
+  }
+
   matSnackBar = inject(MatSnackBar);
   router = inject(Router);
   hide = true;
@@ -21,6 +57,8 @@ export class LoginComponent {
   decodedToken: any | null;
   tokenKey = 'token' 
   roles: string[] = [];
+  tokenDecoded : any;
+  
   login(){
     this.authService.login(this.form.value).subscribe(
       {
@@ -66,5 +104,15 @@ export class LoginComponent {
         email: ['', [Validators.required, Validators.email]],
         password: ['', Validators.required],
       });
+
+      this.tokenDecoded = jwtDecode(localStorage.getItem(this.tokenKey)!)
+      console.log('decoded token');
+      console.log(this.tokenDecoded);
+      console.log('data kelyabdi');
+        console.log(Date.now());
+
+      if(this.tokenDecoded.exp * 1000 < Date.now()){
+        this.router.navigate(['/register'])
+      }
     }
 }
