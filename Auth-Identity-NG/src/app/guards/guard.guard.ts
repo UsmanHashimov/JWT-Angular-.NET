@@ -35,10 +35,11 @@ export const usersGuard: CanActivateFn = (route, state) => {
       return false;
     }
  }
-  
+ else {
   console.log('navigate boldi');
   router.navigate(['/login'])
   return false;
+ }
 };
 
 export const studentProfileGuard: CanActivateFn = (route, state) => {
@@ -55,8 +56,9 @@ export const studentProfileGuard: CanActivateFn = (route, state) => {
       return false;
     }
  }
-  
-  console.log('navigate boldi');
-  router.navigate(['/login'])
-  return false;
+  else {
+    console.log('navigate boldi');
+    router.navigate(['/login'])
+    return false;
+  }
 };

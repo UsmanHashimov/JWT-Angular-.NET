@@ -31,6 +31,9 @@ import { HomeComponent } from './pages/home/home.component';
 import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
 import { TranslocoRootModule } from './transloco-root.module';
+import { MatTableModule } from '@angular/material/table';
+import { InputComponent } from './examples/input/input.component';
+import { OutputComponent } from './examples/output/output.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +47,9 @@ import { TranslocoRootModule } from './transloco-root.module';
     StudentsComponent,
     StudentDetailComponent,
     StudentProfileComponent,
-    UserProfileComponent
+    UserProfileComponent,
+    InputComponent,
+    OutputComponent
   ],
   imports: [
     BrowserModule,
@@ -59,7 +64,8 @@ import { TranslocoRootModule } from './transloco-root.module';
     MatSnackBarModule,
     RouterLink,
     HttpClientModule,
-    TranslocoRootModule
+    TranslocoRootModule,
+    MatTableModule
   ],
   providers: [
     provideAnimationsAsync(),
